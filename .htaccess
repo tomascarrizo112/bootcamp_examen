@@ -1,0 +1,11 @@
+Options -Indexes
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z1-9]+)$ pelicula_detalle.php?data_nulla=$1&id=$2
+
